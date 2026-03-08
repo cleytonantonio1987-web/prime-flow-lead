@@ -23,10 +23,12 @@ const HeroSection = () =>
       <span className="inline-block mb-4 py-2 rounded-full text-primary-foreground font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10 bg-primary px-[16px] text-2xl">
         Prime Pisos e Revestimentos
       </span>
-      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">Pisos Laminados, Vinílicos e Revestimentos
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">Pisos Laminados, Vinílicos e Revestimentos para sua obra ou reforma 
 
-para sua obra ou reforma em Curitiba e Região Metropolitana<br className="hidden md:block" />
-        <span className="block mt-2">para sua obra ou reforma em Curitiba e Região Metropolitana</span>
+
+<br className="hidden md:block" />
+        <span className="block mt-2">
+</span>
       </h1>
       <p className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-6 leading-relaxed">
         Grande variedade de pisos premium com atendimento especializado e instalação profissional. Fale agora com a unidade mais próxima pelo WhatsApp e solicite seu orçamento.
@@ -48,6 +50,4 @@ para sua obra ou reforma em Curitiba e Região Metropolitana<br className="hidde
       </p>
     </div>
   </section>;
-
-
 export default HeroSection;
