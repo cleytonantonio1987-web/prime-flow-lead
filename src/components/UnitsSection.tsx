@@ -1,4 +1,5 @@
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 import { WA_TAMANDARE, WA_BARREIRINHA } from "./WhatsAppButtons";
 
 const units = [
@@ -41,7 +42,7 @@ const UnitsSection = () => (
               </div>
             </div>
             <a href={u.wa} target="_blank" rel="noopener noreferrer" className="btn-whatsapp w-full text-center">
-              <MessageCircle className="w-5 h-5" />
+              <WhatsAppIcon />
               Falar pelo WhatsApp
             </a>
           </div>
