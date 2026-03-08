@@ -2,8 +2,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 import logoIcon from "@/assets/logo-icon.png";
 import { WhatsAppButtons } from "./WhatsAppButtons";
 
-const HeroSection = () => (
-  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+const HeroSection = () =>
+<section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0">
       <img src={heroBg} alt="Ambiente com piso premium" className="w-full h-full object-cover" loading="eager" />
       <div className="absolute inset-0 bg-foreground/70" />
@@ -11,21 +11,21 @@ const HeroSection = () => (
 
     {/* Header / Logo */}
     <a
-      href="#"
-      onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-      className="absolute top-4 left-4 md:top-6 md:left-8 z-20 flex items-center gap-2 group"
-      aria-label="Voltar ao topo"
-    >
-      <img src={logoIcon} alt="Prime Pisos" className="h-8 md:h-10 w-auto brightness-0 invert drop-shadow-lg transition-transform group-hover:scale-105" />
+    href="#"
+    onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}
+    className="absolute top-4 left-4 md:top-6 md:left-8 z-20 flex items-center gap-2 group"
+    aria-label="Voltar ao topo">
+    
+      
     </a>
 
     <div className="relative z-10 section-padding container-narrow text-center">
-      <span className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/20 text-primary-foreground text-sm font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10">
+      <span className="inline-block mb-4 py-2 rounded-full text-primary-foreground font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10 bg-primary px-[16px] text-2xl">
         Prime Pisos e Revestimentos
       </span>
-      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-        Pisos Laminados, Vinílicos, Porcelanatos e Revestimentos
-        <br className="hidden md:block" />
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">Pisos Laminados, Vinílicos e Revestimentos
+
+para sua obra ou reforma em Curitiba e Região Metropolitana<br className="hidden md:block" />
         <span className="block mt-2">para sua obra ou reforma em Curitiba e Região Metropolitana</span>
       </h1>
       <p className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -47,7 +47,7 @@ const HeroSection = () => (
         📍 Lojas físicas em Barreirinha e Almirante Tamandaré
       </p>
     </div>
-  </section>
-);
+  </section>;
+
 
 export default HeroSection;
