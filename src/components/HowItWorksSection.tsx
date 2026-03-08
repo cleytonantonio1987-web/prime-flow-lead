@@ -1,11 +1,10 @@
-import { MessageCircle, Users, ClipboardList, Eye, ShoppingBag } from "lucide-react";
+import { Search, Users, ClipboardList, Wrench } from "lucide-react";
 
 const steps = [
-  { icon: MessageCircle, num: "1", title: "Clique no botão de WhatsApp" },
+  { icon: Search, num: "1", title: "Escolha o piso ideal" },
   { icon: Users, num: "2", title: "Fale com um especialista" },
-  { icon: ClipboardList, num: "3", title: "Receba orientação para escolher o melhor piso" },
-  { icon: Eye, num: "4", title: "Agende uma visita técnica se necessário" },
-  { icon: ShoppingBag, num: "5", title: "Compra e instalação" },
+  { icon: ClipboardList, num: "3", title: "Receba seu orçamento" },
+  { icon: Wrench, num: "4", title: "Agende a instalação" },
 ];
 
 const HowItWorksSection = () => (
@@ -17,16 +16,13 @@ const HowItWorksSection = () => (
         </h2>
         <p className="text-muted-foreground text-lg">Simples, rápido e sem complicação</p>
       </div>
-      <div className="flex flex-col md:flex-row gap-6 items-start justify-center">
-        {steps.map((step, i) => (
-          <div key={step.num} className="flex flex-col items-center text-center flex-1 relative">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        {steps.map((step) => (
+          <div key={step.num} className="flex flex-col items-center text-center">
             <div className="w-16 h-16 rounded-full gradient-warm flex items-center justify-center mb-4 shadow-lg">
               <span className="text-xl font-bold text-primary-foreground">{step.num}</span>
             </div>
-            <p className="text-sm font-semibold text-foreground leading-snug max-w-[160px]">{step.title}</p>
-            {i < steps.length - 1 && (
-              <div className="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-border" />
-            )}
+            <p className="text-sm md:text-base font-semibold text-foreground leading-snug">{step.title}</p>
           </div>
         ))}
       </div>
