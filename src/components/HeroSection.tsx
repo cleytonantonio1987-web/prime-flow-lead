@@ -31,8 +31,8 @@ const HeroSection = () =>
 </span>
       </h1>
       <p className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-6 leading-relaxed">
-        Grande variedade de pisos premium com atendimento especializado e instalação profissional. Fale agora com a unidade mais próxima pelo WhatsApp e solicite seu orçamento.
-      </p>
+
+    </p>
 
       {/* Bullet points */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8">
