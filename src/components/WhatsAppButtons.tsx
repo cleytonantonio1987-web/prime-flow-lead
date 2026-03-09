@@ -8,11 +8,11 @@ export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
   <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
     <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
       <WhatsAppIcon />
-      Unidade Almirante Tamandaré
+      Falar com unidade Almirante Tamandaré
     </a>
     <a href={WA_BARREIRINHA} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
       <WhatsAppIcon />
-      Unidade Barreirinha
+      Falar com unidade Barreirinha
     </a>
   </div>
 );

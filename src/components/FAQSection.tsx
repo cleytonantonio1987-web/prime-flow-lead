@@ -7,20 +7,24 @@ import {
 
 const faqs = [
   {
-    q: "Vocês fazem instalação dos pisos?",
-    a: "Sim! Contamos com equipe própria de instalação para pisos vinílicos e laminados, garantindo um acabamento perfeito e profissional.",
+    q: "Qual o valor do piso laminado?",
+    a: "O valor varia conforme o modelo e a metragem. Entre em contato pelo WhatsApp para receber um orçamento personalizado.",
   },
   {
-    q: "Vocês atendem Curitiba e região metropolitana?",
-    a: "Sim, atendemos toda Curitiba e região metropolitana. Temos duas unidades para melhor atender nossos clientes.",
+    q: "Qual o valor do piso vinílico?",
+    a: "Trabalhamos com diversas linhas de piso vinílico. Envie as medidas do seu ambiente pelo WhatsApp e receba um orçamento rápido.",
   },
   {
-    q: "Posso solicitar orçamento pelo WhatsApp?",
-    a: "Claro! Basta clicar em um dos botões de WhatsApp na página e enviar as medidas ou fotos do seu ambiente. Nosso time responde rapidamente.",
+    q: "Vocês fazem a instalação?",
+    a: "Sim! Contamos com equipe própria de instalação para pisos laminados e vinílicos, garantindo acabamento profissional.",
   },
   {
-    q: "Vocês ajudam a escolher o melhor tipo de piso?",
-    a: "Sim! Nossos especialistas orientam você na escolha do piso ideal para cada ambiente, considerando uso, estilo e orçamento.",
+    q: "Qual o pedido mínimo?",
+    a: "O pedido mínimo é de 20m². Entre em contato para mais detalhes.",
+  },
+  {
+    q: "Atendem Curitiba e região?",
+    a: "Sim, atendemos toda Curitiba e região metropolitana. Temos duas unidades: Barreirinha e Almirante Tamandaré.",
   },
 ];
 
