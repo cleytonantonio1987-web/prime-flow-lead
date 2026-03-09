@@ -25,9 +25,9 @@ const HeroSection = () =>
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4">
         Pisos laminados e vinílicos em Curitiba e Região Metropolitana
       </h1>
-      <p className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-6 leading-relaxed">
-        Orçamento rápido pelo WhatsApp • Instalação profissional
-      </p>
+      
+
+    
 
       {/* Price cards */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
