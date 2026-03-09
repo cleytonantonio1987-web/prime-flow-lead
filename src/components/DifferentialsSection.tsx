@@ -1,10 +1,10 @@
 import { Wrench, Gem, Users, Zap } from "lucide-react";
 
 const items = [
-  { icon: Wrench, title: "Instalação especializada", desc: "Equipe própria para pisos laminados e vinílicos" },
-  { icon: Gem, title: "Acabamento profissional", desc: "Resultado impecável em cada projeto" },
-  { icon: Users, title: "Equipe experiente", desc: "Profissionais qualificados e treinados" },
-  { icon: Zap, title: "Atendimento rápido", desc: "Resposta ágil pelo WhatsApp" },
+  { icon: Wrench, title: "Instalação profissional", desc: "Equipe própria para pisos laminados e vinílicos" },
+  { icon: Gem, title: "Equipe especializada", desc: "Profissionais qualificados e treinados" },
+  { icon: Zap, title: "Atendimento rápido pelo WhatsApp", desc: "Resposta ágil e orçamento sem complicação" },
+  { icon: Users, title: "Garantia de instalação", desc: "Segurança e qualidade no serviço" },
 ];
 
 const DifferentialsSection = () => (

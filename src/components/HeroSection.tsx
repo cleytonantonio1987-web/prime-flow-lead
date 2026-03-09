@@ -49,9 +49,9 @@ const HeroSection = () =>
 
       {/* Bullet points */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8">
-        <span className="text-primary-foreground/90 text-sm md:text-base font-medium">✔ Atendimento em Curitiba e região metropolitana</span>
         <span className="text-primary-foreground/90 text-sm md:text-base font-medium">✔ Orçamento rápido pelo WhatsApp</span>
         <span className="text-primary-foreground/90 text-sm md:text-base font-medium">✔ Instalação profissional</span>
+        <span className="text-primary-foreground/90 text-sm md:text-base font-medium">✔ Garantia de instalação</span>
       </div>
 
       <p className="text-primary-foreground/70 text-sm font-semibold mb-4 uppercase tracking-wide">
