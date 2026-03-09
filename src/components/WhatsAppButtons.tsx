@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
-const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá!%20Vim%20pelo%20site%20da%20Prime%20Pisos%20e%20Revestimentos%20e%20gostaria%20de%20um%20orçamento%20de%20pisos";
-const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá!%20Vim%20pelo%20site%20da%20Prime%20Pisos%20e%20Revestimentos%20e%20gostaria%20de%20um%20orçamento%20de%20pisos";
+const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
+const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
   <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
