@@ -58,9 +58,9 @@ const HeroSection = () =>
         Fale agora com a unidade mais próxima:
       </p>
       <WhatsAppButtons className="justify-center" />
-      <p className="mt-6 text-sm text-primary-foreground/60 flex items-center justify-center gap-1">
-        📍 Lojas físicas em Barreirinha e Almirante Tamandaré
-      </p>
+      
+
+    
     </div>
   </section>;
 export default HeroSection;
