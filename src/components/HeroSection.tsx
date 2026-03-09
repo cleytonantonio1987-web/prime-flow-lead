@@ -19,10 +19,10 @@ const HeroSection = () =>
     </a>
 
     <div className="relative z-10 section-padding container-narrow text-center">
-      <span className="inline-block mb-4 py-2 rounded-full text-primary-foreground font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10 bg-primary px-[16px] text-2xl">
+      <span className="inline-block mb-4 py-2 rounded-full text-primary-foreground font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10 bg-primary px-[16px] text-sm">
         Prime Pisos e Revestimentos
       </span>
-      <h1 className="text-3xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:text-3xl">
+      <h1 className="text-3xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:text-2xl">
         Pisos laminados e vinílicos em Curitiba e Região Metropolitana
       </h1>
       
