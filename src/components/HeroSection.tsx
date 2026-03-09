@@ -23,26 +23,29 @@ const HeroSection = () =>
         Prime Pisos e Revestimentos
       </span>
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4">
-        Pisos Laminados e Vinílicos Instalados em Curitiba
+        Pisos laminados e vinílicos em Curitiba e Região Metropolitana
       </h1>
       <p className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-6 leading-relaxed">
-        Orçamento rápido pelo WhatsApp • Instalação profissional • Atendimento em Curitiba e região
+        Orçamento rápido pelo WhatsApp • Instalação profissional
       </p>
 
       {/* Price cards */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
         <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
           <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Laminado</p>
-          <p className="text-primary-foreground/70 text-xs mb-1">Instalado a partir de</p>
-          <p className="text-3xl font-bold text-primary-foreground">R$ XX<span className="text-lg">/m²</span></p>
+          <p className="text-3xl font-bold text-primary-foreground">R$ 59,97<span className="text-lg">/m²</span></p>
+          <p className="text-primary-foreground/70 text-xs mt-1">instalado</p>
         </div>
         <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
           <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Vinílico</p>
-          <p className="text-primary-foreground/70 text-xs mb-1">Instalado a partir de</p>
-          <p className="text-3xl font-bold text-primary-foreground">R$ XX<span className="text-lg">/m²</span></p>
+          <p className="text-3xl font-bold text-primary-foreground">R$ 62,97<span className="text-lg">/m²</span></p>
+          <p className="text-primary-foreground/70 text-xs mt-1">instalado</p>
         </div>
       </div>
-      <p className="text-primary-foreground/50 text-xs mb-6">*Pedido mínimo de 20m²</p>
+      <div className="text-primary-foreground/50 text-xs mb-6 space-y-0.5">
+        <p>*Pedido mínimo de 20m²</p>
+        <p>*Não incluso manta, acabamentos e rodapés</p>
+      </div>
 
       {/* Bullet points */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8">
