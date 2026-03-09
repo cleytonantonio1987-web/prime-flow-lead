@@ -1,15 +1,13 @@
+import laminado from "@/assets/laminado.jpg";
+import vinilico from "@/assets/vinilico.jpg";
 import porcelanato from "@/assets/porcelanato.jpg";
 import ceramico from "@/assets/ceramico.jpg";
-import revestimento from "@/assets/revestimento.jpg";
-import vinilico from "@/assets/vinilico.jpg";
-import laminado from "@/assets/laminado.jpg";
 
 const products = [
-  { name: "Porcelanatos", img: porcelanato, desc: "Elegância e durabilidade para todos os ambientes" },
-  { name: "Pisos Cerâmicos", img: ceramico, desc: "Versatilidade e resistência para cozinhas e áreas molhadas" },
-  { name: "Revestimentos de Parede", img: revestimento, desc: "Transforme suas paredes com estilo e personalidade" },
-  { name: "Piso Vinílico", img: vinilico, desc: "Conforto térmico e acústico com visual sofisticado" },
-  { name: "Piso Laminado", img: laminado, desc: "Praticidade e beleza com instalação rápida" },
+  { name: "Piso Laminado", img: laminado, desc: "Ideal para salas e quartos, instalação rápida e acabamento sofisticado.", featured: true },
+  { name: "Piso Vinílico", img: vinilico, desc: "Conforto térmico e acústico, excelente para ambientes residenciais.", featured: true },
+  { name: "Porcelanato", img: porcelanato, desc: "Alta resistência e acabamento moderno.", featured: false },
+  { name: "Piso Cerâmico", img: ceramico, desc: "Excelente custo-benefício.", featured: false },
 ];
 
 const ProductsSection = () => (
@@ -20,17 +18,20 @@ const ProductsSection = () => (
           Tipos de Pisos Disponíveis
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Encontre o piso ideal para cada ambiente da sua casa ou empresa
+          Encontre o piso ideal para cada ambiente
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {products.map((p) => (
-          <div key={p.name} className="group relative overflow-hidden rounded-2xl bg-card shadow-md hover:shadow-xl transition-all duration-300">
-            <div className="aspect-[4/3] overflow-hidden">
+          <div key={p.name} className={`group relative overflow-hidden rounded-2xl bg-card shadow-md hover:shadow-xl transition-all duration-300 ${p.featured ? "ring-2 ring-primary" : ""}`}>
+            <div className={`overflow-hidden ${p.featured ? "aspect-[4/3]" : "aspect-[16/9]"}`}>
               <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-foreground mb-2 font-serif">{p.name}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="text-xl font-bold text-foreground font-serif">{p.name}</h3>
+                {p.featured && <span className="text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground px-2 py-0.5 rounded-full">Destaque</span>}
+              </div>
               <p className="text-muted-foreground text-sm">{p.desc}</p>
             </div>
           </div>

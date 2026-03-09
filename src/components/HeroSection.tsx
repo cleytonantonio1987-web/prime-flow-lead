@@ -15,24 +15,34 @@ const HeroSection = () =>
     onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}
     className="absolute top-4 left-4 md:top-6 md:left-8 z-20 flex items-center gap-2 group"
     aria-label="Voltar ao topo">
-    
-      
+      <img src={logoIcon} alt="Prime Pisos" className="h-8 md:h-10 w-auto" />
     </a>
 
     <div className="relative z-10 section-padding container-narrow text-center">
       <span className="inline-block mb-4 py-2 rounded-full text-primary-foreground font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10 bg-primary px-[16px] text-2xl">
         Prime Pisos e Revestimentos
       </span>
-      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">Pisos Laminados, Vinílicos e Revestimentos para sua obra ou reforma 
-
-
-<br className="hidden md:block" />
-        <span className="block mt-2">
-</span>
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4">
+        Pisos Laminados e Vinílicos Instalados em Curitiba
       </h1>
       <p className="text-lg md:text-xl text-primary-foreground/85 max-w-3xl mx-auto mb-6 leading-relaxed">
+        Orçamento rápido pelo WhatsApp • Instalação profissional • Atendimento em Curitiba e região
+      </p>
 
-    </p>
+      {/* Price cards */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+        <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
+          <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Laminado</p>
+          <p className="text-primary-foreground/70 text-xs mb-1">Instalado a partir de</p>
+          <p className="text-3xl font-bold text-primary-foreground">R$ XX<span className="text-lg">/m²</span></p>
+        </div>
+        <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
+          <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Vinílico</p>
+          <p className="text-primary-foreground/70 text-xs mb-1">Instalado a partir de</p>
+          <p className="text-3xl font-bold text-primary-foreground">R$ XX<span className="text-lg">/m²</span></p>
+        </div>
+      </div>
+      <p className="text-primary-foreground/50 text-xs mb-6">*Pedido mínimo de 20m²</p>
 
       {/* Bullet points */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 mb-8">
