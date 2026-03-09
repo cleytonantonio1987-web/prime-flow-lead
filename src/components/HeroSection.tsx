@@ -15,7 +15,7 @@ const HeroSection = () =>
     onClick={(e) => {e.preventDefault();window.scrollTo({ top: 0, behavior: "smooth" });}}
     className="absolute top-4 left-4 md:top-6 md:left-8 z-20 flex items-center gap-2 group"
     aria-label="Voltar ao topo">
-      <img src={logoIcon} alt="Prime Pisos" className="h-8 md:h-10 w-auto" />
+      
     </a>
 
     <div className="relative z-10 section-padding container-narrow text-center">
