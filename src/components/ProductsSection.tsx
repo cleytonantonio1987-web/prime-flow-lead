@@ -1,13 +1,9 @@
 import laminado from "@/assets/laminado.jpg";
 import vinilico from "@/assets/vinilico.jpg";
-import porcelanato from "@/assets/porcelanato.jpg";
-import ceramico from "@/assets/ceramico.jpg";
 
 const products = [
-  { name: "Piso Laminado", img: laminado, desc: "Ideal para salas e quartos, instalação rápida e acabamento sofisticado.", featured: true },
-  { name: "Piso Vinílico", img: vinilico, desc: "Conforto térmico e acústico, excelente para ambientes residenciais.", featured: true },
-  { name: "Porcelanato", img: porcelanato, desc: "Alta resistência e acabamento moderno.", featured: false },
-  { name: "Piso Cerâmico", img: ceramico, desc: "Excelente custo-benefício.", featured: false },
+  { name: "Piso Laminado", img: laminado, desc: "Ideal para salas e quartos, instalação rápida e acabamento sofisticado." },
+  { name: "Piso Vinílico", img: vinilico, desc: "Conforto térmico e acústico, excelente para ambientes residenciais." },
 ];
 
 const ProductsSection = () => (
@@ -23,15 +19,12 @@ const ProductsSection = () => (
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {products.map((p) => (
-          <div key={p.name} className={`group relative overflow-hidden rounded-2xl bg-card shadow-md hover:shadow-xl transition-all duration-300 ${p.featured ? "ring-2 ring-primary" : ""}`}>
-            <div className={`overflow-hidden ${p.featured ? "aspect-[4/3]" : "aspect-[16/9]"}`}>
+          <div key={p.name} className="group relative overflow-hidden rounded-2xl bg-card shadow-md hover:shadow-xl transition-all duration-300 ring-2 ring-primary">
+            <div className="overflow-hidden aspect-[4/3]">
               <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <div className="p-6">
-              <div className="flex items-center gap-2 mb-2">
-                <h3 className="text-xl font-bold text-foreground font-serif">{p.name}</h3>
-                {p.featured && <span className="text-xs font-bold uppercase tracking-wider bg-primary text-primary-foreground px-2 py-0.5 rounded-full">Destaque</span>}
-              </div>
+              <h3 className="text-xl font-bold text-foreground font-serif mb-2">{p.name}</h3>
               <p className="text-muted-foreground text-sm">{p.desc}</p>
             </div>
           </div>

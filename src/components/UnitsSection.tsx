@@ -43,7 +43,7 @@ const UnitsSection = () => (
             </div>
             <a href={u.wa} target="_blank" rel="noopener noreferrer" className="btn-whatsapp w-full text-center">
               <WhatsAppIcon />
-              Falar pelo WhatsApp
+              Falar no WhatsApp
             </a>
           </div>
         ))}
