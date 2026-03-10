@@ -1,8 +1,7 @@
-import gallery1 from "@/assets/gallery1.jpg";
 import gallery2 from "@/assets/gallery2.jpg";
 
 const images = [
-  { src: gallery1, alt: "Ambiente com piso laminado instalado" },
+  { src: "/lovable-uploads/dd0056e2-7586-485c-8c1f-50bd5d7a83c9.jpg", alt: "Ambiente com piso laminado instalado" },
   { src: gallery2, alt: "Sala com piso vinílico" },
   { src: "/lovable-uploads/0833d8e3-c45b-4fb9-a005-f2b0318f6396.jpg", alt: "Processo de instalação de piso" },
   { src: "/lovable-uploads/58cff1fc-70e0-4628-9eae-200ea88b4989.jpg", alt: "Acabamento final de piso laminado" },
