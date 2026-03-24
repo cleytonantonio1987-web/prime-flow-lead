@@ -6,11 +6,11 @@ const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20sit
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
   <div className={flex flex-col sm:flex-row gap-4 ${className}}>
-    <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="gtm-tamandare">
+    <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="btn-tamandare">
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
     </a>
-    <a href={WA_BARREIRINHA} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="gtm-barreirinha">
+    <a href={WA_BARREIRINHA} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="btn-barreirinha">
       <WhatsAppIcon />
       Falar com unidade Barreirinha
     </a>
@@ -39,7 +39,7 @@ export const FloatingWhatsApp = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
-            id="gtm-tamandare-flutuante"
+            id="btn-tamandare-flutuante"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Almirante Tamandaré
@@ -50,7 +50,7 @@ export const FloatingWhatsApp = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
-            id="gtm-barreirinha-flutuante"
+            id="btn-barreirinha-flutuante"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Barreirinha
