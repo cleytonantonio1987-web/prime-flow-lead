@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useRef, useEffect } from "react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
@@ -8,23 +6,11 @@ const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20sit
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
   <div className={flex flex-col sm:flex-row gap-4 ${className}}>
-    <a 
-      id="btn-whats-tamandare"
-      href={WA_TAMANDARE} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="btn-whatsapp"
-    >
+    <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="gtm-tamandare">
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
     </a>
-    <a 
-      id="btn-whats-barreirinha"
-      href={WA_BARREIRINHA} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="btn-whatsapp"
-    >
+    <a href={WA_BARREIRINHA} target="_blank" rel="noopener noreferrer" className="btn-whatsapp" id="gtm-barreirinha">
       <WhatsAppIcon />
       Falar com unidade Barreirinha
     </a>
@@ -48,23 +34,23 @@ export const FloatingWhatsApp = () => {
       {open && (
         <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-4 duration-200 mb-2">
           <a
-            id="btn-whats-tamandare-float"
             href={WA_TAMANDARE}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
+            id="gtm-tamandare-flutuante"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Almirante Tamandaré
           </a>
           <a
-            id="btn-whats-barreirinha-float"
             href={WA_BARREIRINHA}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
+            id="gtm-barreirinha-flutuante"
           >
             <WhatsAppIcon className="w-5 h-5" />
             Barreirinha
