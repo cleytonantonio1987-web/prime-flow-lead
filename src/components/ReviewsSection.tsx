@@ -1,26 +1,11 @@
 import { Star } from "lucide-react";
 
 const reviews = [
-  {
-    text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍👍👍",
-    name: "Fernando Cesar Pires — Curitiba (via Google)"
-  },
-  {
-    text: "Cinco estrelas com certeza! Fui muito bem atendido e a equipe me ajudou a escolher o piso ideal para o meu projeto, explicando as diferenças técnicas de cada um. Entrega rápida e pontual e o preço sem duvida o melhor que encontrei!",
-    name: "Mauro Azevedo — Curitiba (via Google)"
-  },
-  {
-    text: "Variedade muito grande e preço muito bom!",
-    name: "Aline Zaninski — Curitiba (via Google)"
-  },
-  {
-    text: "Excelente atendimento e qualidade!!Recomendo",
-    name: "Marjorie Pavanelli — Almirante Tamandaré (via Google)"
-  },
-  {
-    text: "Excelente atendimento! A equipe foi muito atenciosa desde o primeiro contato, tirou todas as dúvidas e ajudou na escolha do melhor piso para minha casa. Produto de ótima qualidade e instalação impecável. Recomendo muito!",
-    name: "Pamela Donaide — Almirante Tamandaré (via Google)"
-  }
+  { text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍👍👍", name: "Fernando Cesar Pires — Curitiba (via Google)" },
+  { text: "Cinco estrelas com certeza! Fui muito bem atendido e a equipe me ajudou a escolher o piso ideal para o meu projeto, explicando as diferenças técnicas de cada um. Entrega rápida e pontual e o preço sem duvida o melhor que encontrei!", name: "Mauro Azevedo — Curitiba (via Google)" },
+  { text: "Variedade muito grande e preço muito bom!", name: "Aline Zaninski — Curitiba (via Google)" },
+  { text: "Excelente atendimento e qualidade!!Recomendo", name: "Marjorie Pavanelli — Almirante Tamandaré (via Google)" },
+  { text: "Excelente atendimento! A equipe foi muito atenciosa desde o primeiro contato, tirou todas as dúvidas e ajudou na escolha do melhor piso para minha casa. Produto de ótima qualidade e instalação impecável. Recomendo muito!", name: "Pamela Donaide — Almirante Tamandaré (via Google)" }
 ];
 
 const ReviewsSection = () => {
@@ -50,15 +35,17 @@ const ReviewsSection = () => {
           ))}
         </div>
         
-        {/* Rodapé Blindado com Nome Curto */}
-        <div className="mt-16 pt-8 border-t border-gray-100 text-center px-1">
-          <div className="flex flex-nowrap justify-center items-center text-[9px] sm:text-[11px] md:text-sm text-gray-500 gap-1 tracking-tighter sm:tracking-normal">
-            <span className="whitespace-nowrap">© 2026 Prime Pisos</span>
-            <span className="text-gray-300">|</span> 
-            <span className="whitespace-nowrap">Desenvolvido por</span>
-            <strong className="text-[#25D366] font-extrabold uppercase whitespace-nowrap">
-              ASSESSORIA I9 MKT
-            </strong>
+        {/* Rodapé Inteligente - Mantém o nome completo e ajusta para S23 */}
+        <div className="mt-16 pt-8 border-t border-gray-100 text-center px-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-x-2 gap-y-1 text-[10px] md:text-sm text-gray-500">
+            <span className="whitespace-nowrap">© 2026 Prime Pisos.</span>
+            <span className="hidden sm:inline text-gray-300">|</span> 
+            <div className="flex items-center gap-1">
+              <span>Desenvolvido por</span>
+              <strong className="text-[#25D366] font-extrabold uppercase whitespace-nowrap">
+                ASSESSORIA INOVA MKT
+              </strong>
+            </div>
           </div>
         </div>
       </div>
