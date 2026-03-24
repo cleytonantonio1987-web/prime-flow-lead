@@ -23,12 +23,18 @@ const Index = () => {
       <UnitsSection />
       <FAQSection />
       <FinalCTA />
-      <footer className="py-8 text-center bg-foreground">
-        <p className="bg-foreground text-destructive-foreground text-xs">
-          © {new Date().getFullYear()} Prime Pisos e Revestimentos. Todos os direitos reservados.<br />
-          Desenvolvido por Assessoria Inova
-        </p>
-      </footer>
+     <footer className="py-8 text-center bg-foreground">
+  <p className="text-xs text-destructive-foreground md:whitespace-nowrap">
+    © {new Date().getFullYear()} Prime Pisos e Revestimentos. Todos os direitos reservados.
+  </p>
+
+  <p className="text-xs text-destructive-foreground mt-1">
+    Desenvolvido por{" "}
+    <span className="text-green-500 font-semibold">
+      ASSESSORIA INOVA MKT
+    </span>
+  </p>
+</footer>
       <FloatingWhatsApp />
     </main>
   );
