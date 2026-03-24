@@ -53,7 +53,7 @@ const ReviewsSection = () => {
         {/* Rodapé Ultra-Ajustável */}
         <div className="mt-16 pt-8 border-t border-gray-100 text-center px-2">
           <div className="flex flex-col md:flex-row justify-center items-center text-[9px] sm:text-[10px] md:text-sm text-gray-500 tracking-tighter sm:tracking-normal">
-            <p className="whitespace-nowrap">© 2026 Prime Pisos e Revestimentos.</p>
+            <p className="whitespace-nowrap">© 2026 Prime Pisos.</p>
             <span className="hidden md:inline mx-1">|</span> 
             <p className="flex items-center gap-1 whitespace-nowrap">
               <span>Desenvolvido por</span>
