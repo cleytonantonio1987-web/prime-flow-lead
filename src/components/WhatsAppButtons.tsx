@@ -5,7 +5,7 @@ const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
-  <div className={flex flex-col sm:flex-row gap-4 ${className}}>
+  <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
   <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" id="btn-tamandare" className="btn-whatsapp">
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
