@@ -1,11 +1,27 @@
 import { Star } from "lucide-react";
 
 const reviews = [
-  { text: "Atendimento rápido e instalação impecável. Recomendo.", name: "Cliente Google" },
-  { text: "Orçamento fácil pelo WhatsApp e serviço muito bem feito.", name: "Cliente Google" },
-  { text: "Equipe profissional e instalação rápida.", name: "Cliente Google" },
-  { text: "Piso laminado ficou perfeito. Superou as expectativas.", name: "Cliente Google" },
-  { text: "Preço justo e acabamento excelente. Voltarei a comprar.", name: "Cliente Google" },
+ const reviews = [
+  {
+    text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍👍👍",
+    name: "Fernando Cesar Pires — Curitiba (via Google)"
+  },
+  {
+    text: "Cinco estrelas com certeza! Fui muito bem atendido e a equipe me ajudou a escolher o piso ideal para o meu projeto, explicando as diferenças técnicas de cada um. Entrega rápida e pontual e o preço sem duvida o melhor que encontrei!",
+    name: "Mauro Azevedo — Curitiba (via Google)"
+  },
+  {
+    text: "Variedade muito grande e preço muito bom!",
+    name: "Aline Zaninski — Curitiba (via Google)"
+  },
+  {
+    text: "Excelente atendimento e qualidade!!Recomendo",
+    name: "Marjorie Pavanelli — Almirante Tamandaré (via Google)"
+  },
+  {
+    text: "Excelente atendimento! A equipe foi muito atenciosa desde o primeiro contato, tirou todas as dúvidas e ajudou na escolha do melhor piso para minha casa. Produto de ótima qualidade e instalação impecável. Recomendo muito!",
+    name: "Pamela Donaide — Almirante Tamandaré (via Google)"
+  }
 ];
 
 const ReviewsSection = () => (
