@@ -48,17 +48,19 @@ const ReviewsSection = () => {
           ))}
         </div>
         
+       {/* Rodapé Blindado para Mobile */}
         <div className="mt-20 pt-8 border-t border-gray-100 text-center">
-          <p className="text-[7px] md:text-sm text-gray-500">
-            © 2026 Prime Pisos e Revestimentos. Todos os direitos reservados.
-            <br className="md:hidden" /> 
-            <span className="md:ml-1">Desenvolvido por </span>
-            <strong className="text-[#25D366]">ASSESSORIA I9 MKT</strong>
-          </p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-1 text-[10px] md:text-sm text-gray-500">
+            <p>© 2026 Prime Pisos e Revestimentos.</p>
+            <p className="flex items-center gap-1">
+              <span className="hidden md:inline">|</span> 
+              <span>Desenvolvido por</span>
+              <strong className="text-[#25D366] font-bold uppercase tracking-wider">
+                ASSESSORIA I9 MKT
+              </strong>
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-  );
 };
 
 export default ReviewsSection;
