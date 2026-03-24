@@ -49,7 +49,7 @@ const ReviewsSection = () => {
         </div>
         
         <div className="mt-20 pt-8 border-t border-gray-100 text-center">
-          <p className="text-[10px] md:text-sm text-gray-500">
+          <p className="text-[9px] md:text-sm text-gray-500">
             © 2026 Prime Pisos e Revestimentos. Todos os direitos reservados.
             <br className="md:hidden" /> 
             <span className="md:ml-1">Desenvolvido por </span>
