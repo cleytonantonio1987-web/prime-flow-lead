@@ -33,12 +33,12 @@ const HeroSection = () =>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
         <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
           <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Laminado</p>
-          <p className="text-3xl font-bold text-primary-foreground">R$ 59,97<span className="text-lg">/m²</span></p>
+          <p className="text-3xl font-bold text-primary-foreground">R$ 69,97<span className="text-lg">/m²</span></p>
           <p className="text-primary-foreground/70 text-xs mt-1">instalado</p>
         </div>
         <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
           <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Vinílico</p>
-          <p className="text-3xl font-bold text-primary-foreground">R$ 62,97<span className="text-lg">/m²</span></p>
+          <p className="text-3xl font-bold text-primary-foreground">R$ 79,97<span className="text-lg">/m²</span></p>
           <p className="text-primary-foreground/70 text-xs mt-1">instalado</p>
         </div>
       </div>
