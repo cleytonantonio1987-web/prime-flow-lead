@@ -5,12 +5,24 @@ const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
-  <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
-    <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+  <div className={flex flex-col sm:flex-row gap-4 ${className}}>
+    <a 
+      id="btn-whats-tamandare"
+      href={WA_TAMANDARE} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="btn-whatsapp"
+    >
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
     </a>
-    <a href={WA_BARREIRINHA} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+    <a 
+      id="btn-whats-barreirinha"
+      href={WA_BARREIRINHA} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="btn-whatsapp"
+    >
       <WhatsAppIcon />
       Falar com unidade Barreirinha
     </a>
@@ -34,6 +46,7 @@ export const FloatingWhatsApp = () => {
       {open && (
         <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-4 duration-200 mb-2">
           <a
+            id="btn-whats-tamandare-float"
             href={WA_TAMANDARE}
             target="_blank"
             rel="noopener noreferrer"
@@ -44,6 +57,7 @@ export const FloatingWhatsApp = () => {
             Almirante Tamandaré
           </a>
           <a
+            id="btn-whats-barreirinha-float"
             href={WA_BARREIRINHA}
             target="_blank"
             rel="noopener noreferrer"
