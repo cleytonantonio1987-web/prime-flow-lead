@@ -1,6 +1,5 @@
 import { Star } from "lucide-react";
 
-const reviews = [
  const reviews = [
   {
     text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍👍👍",
