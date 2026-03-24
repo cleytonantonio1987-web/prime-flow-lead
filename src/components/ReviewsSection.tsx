@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍",
+    text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍👍👍",
     name: "Fernando Cesar Pires — Curitiba (via Google)"
   },
   {
