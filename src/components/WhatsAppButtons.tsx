@@ -6,7 +6,7 @@ const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20sit
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
   <div className={flex flex-col sm:flex-row gap-4 ${className}}>
-    <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+  <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" id="btn-tamandare" className="btn-whatsapp">
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
     </a>
