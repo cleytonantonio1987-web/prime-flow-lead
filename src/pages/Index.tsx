@@ -24,7 +24,7 @@ const Index = () => {
       <FAQSection />
       <FinalCTA />
       <footer className="py-8 text-center bg-foreground">
-        <p className="text-sm bg-foreground text-destructive-foreground">
+        <p className="bg-foreground text-destructive-foreground text-xs">
           © {new Date().getFullYear()} Prime Pisos e Revestimentos. Todos os direitos reservados.<br />
           Desenvolvido por Assessoria Inova
         </p>
