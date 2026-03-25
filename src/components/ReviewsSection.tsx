@@ -12,42 +12,35 @@ const ReviewsSection = () => {
   return (
     <section className="py-16 bg-white" id="reviews">
       <div className="container mx-auto px-4 max-w-6xl">
+        
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Clientes que já instalaram com a gente
           </h2>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
+              
               <div className="flex mb-4 gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-[#A67C52] text-[#A67C52]" />
                 ))}
               </div>
+
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow text-sm md:text-base">
                 {review.text}
               </p>
+
               <p className="text-gray-500 text-xs md:text-sm font-medium">
                 {review.name}
               </p>
+
             </div>
           ))}
         </div>
-        
-        {/* Rodapé Inteligente - Mantém o nome completo e ajusta para S23 */}
-        <div className="mt-16 pt-8 border-t border-gray-100 text-center px-4">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-x-2 gap-y-1 text-[10px] md:text-sm text-gray-500">
-            <span className="whitespace-nowrap">© 2026 Prime Pisos.</span>
-            <span className="hidden sm:inline text-gray-300">|</span> 
-            <div className="flex items-center gap-1">
-              <span>Desenvolvido por</span>
-              <strong className="text-[#25D366] font-extrabold uppercase whitespace-nowrap">
-                ASSESSORIA INOVA MKT
-              </strong>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
