@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K5VCKTST');</script>
-    <link rel="icon" type="image/png" sizes="40x40" href="/favicon.png?v=30">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=30">
-    <link rel="shortcut icon" href="/favicon.png?v=30">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prime Pisos e Revestimentos | Pisos Premium em Curitiba</title>
-    <meta name="description" content="Pisos laminados, vinílicos, porcelanatos e revestimentos em Curitiba. Atendimento especializado e instalação profissional. Solicite seu orçamento pelo WhatsApp.">
-    <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Prime Pisos e Revestimentos",
-      "description": "Loja especializada em pisos e revestimentos em Curitiba e região metropolitana",
-      "areaServed": "Curitiba e região metropolitana"
-    }
-    </script>
-    <meta property="og:title" content="Prime Pisos e Revestimentos | Pisos Premium em Curitiba">
-    <meta name="twitter:title" content="Prime Pisos e Revestimentos | Pisos Premium em Curitiba">
-    <meta property="og:description" content="Pisos laminados, vinílicos, porcelanatos e revestimentos em Curitiba. Atendimento especializado e instalação profissional. Solicite seu orçamento pelo WhatsApp.">
-    <meta name="twitter:description" content="Pisos laminados, vinílicos, porcelanatos e revestimentos em Curitiba. Atendimento especializado e instalação profissional. Solicite seu orçamento pelo WhatsApp.">
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a2b60783-851f-4d0c-bec9-354c2b66517c/id-preview-4c7b2418--40875ed0-0937-47ef-919b-0a6dbc15c628.lovable.app-1772973319220.png">
-    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a2b60783-851f-4d0c-bec9-354c2b66517c/id-preview-4c7b2418--40875ed0-0937-47ef-919b-0a6dbc15c628.lovable.app-1772973319220.png">
-  </head>
-  <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5VCKTST" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
-  </body>
-</html>
+import React from 'react';
+
+const ReviewsSection = () => {
+  return (
+    <section id="reviews" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <h2 className="text-3xl font-bold mb-8 text-primary text-gray-900">O que nossos clientes dizem</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-800">
+          <div className="p-6 border rounded-lg shadow-sm">
+            <p className="italic">"Excelente atendimento e instalação impecável."</p>
+            <p className="mt-4 font-bold">- João Silva</p>
+          </div>
+          <div className="p-6 border rounded-lg shadow-sm">
+            <p className="italic">"Piso vinílico de alta qualidade, recomendo muito!"</p>
+            <p className="mt-4 font-bold">- Maria Oliveira</p>
+          </div>
+          <div className="p-6 border rounded-lg shadow-sm">
+            <p className="italic">"Profissionais atenciosos e entrega no prazo."</p>
+            <p className="mt-4 font-bold">- Ricardo Santos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ReviewsSection;
