@@ -1,49 +1,43 @@
-import { Star } from "lucide-react";
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K5VCKTST');</script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="40x40" href="/favicon.png?v=30">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=30">
+    <link rel="shortcut icon" href="/favicon.png?v=30">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prime Pisos e Revestimentos | Pisos Premium em Curitiba</title>
+    <meta name="description" content="Pisos laminados, vinílicos, porcelanatos e revestimentos em Curitiba. Atendimento especializado e instalação profissional. Solicite seu orçamento pelo WhatsApp.">
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Prime Pisos e Revestimentos",
+      "description": "Loja especializada em pisos e revestimentos em Curitiba e região metropolitana",
+      "areaServed": "Curitiba e região metropolitana"
+    }
+    </script>
 
-const reviews = [
-  { text: "Encontrei o que procurava, gostei do preço e fui bem atendido.(até tomei um capuccino durante o atendimento) recomendo 👍👍👍", name: "Fernando Cesar Pires — Curitiba (via Google)" },
-  { text: "Cinco estrelas com certeza! Fui muito bem atendido e a equipe me ajudou a escolher o piso ideal para o meu projeto, explicando as diferenças técnicas de cada um. Entrega rápida e pontual e o preço sem duvida o melhor que encontrei!", name: "Mauro Azevedo — Curitiba (via Google)" },
-  { text: "Variedade muito grande e preço muito bom!", name: "Aline Zaninski — Curitiba (via Google)" },
-  { text: "Excelente atendimento e qualidade!!Recomendo", name: "Marjorie Pavanelli — Almirante Tamandaré (via Google)" },
-  { text: "Excelente atendimento! A equipe foi muito atenciosa desde o primeiro contato, tirou todas as dúvidas e ajudou na escolha do melhor piso para minha casa. Produto de ótima qualidade e instalação impecável. Recomendo muito!", name: "Pamela Donaide — Almirante Tamandaré (via Google)" }
-];
-
-const ReviewsSection = () => {
-  return (
-    <section className="py-16 bg-white" id="reviews">
-      <div className="container mx-auto px-4 max-w-6xl">
-        
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Clientes que já instalaram com a gente
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
-            <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
-              
-              <div className="flex mb-4 gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#A67C52] text-[#A67C52]" />
-                ))}
-              </div>
-
-              <p className="text-gray-700 leading-relaxed mb-6 flex-grow text-sm md:text-base">
-                {review.text}
-              </p>
-
-              <p className="text-gray-500 text-xs md:text-sm font-medium">
-                {review.name}
-              </p>
-
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  );
-};
-
-export default ReviewsSection;
+    <meta property="og:title" content="Prime Pisos e Revestimentos | Pisos Premium em Curitiba">
+    <meta name="twitter:title" content="Prime Pisos e Revestimentos | Pisos Premium em Curitiba">
+    <meta property="og:description" content="Pisos laminados, vinílicos, porcelanatos e revestimentos em Curitiba. Atendimento especializado e instalação profissional. Solicite seu orçamento pelo WhatsApp.">
+    <meta name="twitter:description" content="Pisos laminados, vinílicos, porcelanatos e revestimentos em Curitiba. Atendimento especializado e instalação profissional. Solicite seu orçamento pelo WhatsApp.">
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a2b60783-851f-4d0c-bec9-354c2b66517c/id-preview-4c7b2418--40875ed0-0937-47ef-919b-0a6dbc15c628.lovable.app-1772973319220.png">
+    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a2b60783-851f-4d0c-bec9-354c2b66517c/id-preview-4c7b2418--40875ed0-0937-47ef-919b-0a6dbc15c628.lovable.app-1772973319220.png">
+  </head>
+  <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5VCKTST"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
