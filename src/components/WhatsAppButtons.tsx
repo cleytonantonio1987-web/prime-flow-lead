@@ -11,7 +11,7 @@ export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
       target="_blank" 
       rel="noopener noreferrer" 
       className="btn-whatsapp"
-      onClick={() => { if (typeof window !== 'undefined' && (window as any).converterTamandare) (window as any).converterTamandare(); }}
+      onClick={() => { (window as any).converterTamandare?.(); }}
     >
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
@@ -21,7 +21,7 @@ export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
       target="_blank" 
       rel="noopener noreferrer" 
       className="btn-whatsapp"
-      onClick={() => { if (typeof window !== 'undefined' && (window as any).converterBarreirinha) (window as any).converterBarreirinha(); }}
+      onClick={() => { (window as any).converterBarreirinha?.(); }}
     >
       <WhatsAppIcon />
       Falar com unidade Barreirinha
@@ -49,7 +49,7 @@ export const FloatingWhatsApp = () => {
             href={WA_TAMANDARE}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => { if (typeof window !== 'undefined' && (window as any).converterTamandare) (window as any).converterTamandare(); }}
+            onClick={() => { (window as any).converterTamandare?.(); }}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
@@ -60,7 +60,7 @@ export const FloatingWhatsApp = () => {
             href={WA_BARREIRINHA}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => { if (typeof window !== 'undefined' && (window as any).converterBarreirinha) (window as any).converterBarreirinha(); }}
+            onClick={() => { (window as any).converterBarreirinha?.(); }}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
