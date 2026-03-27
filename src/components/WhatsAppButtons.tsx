@@ -4,27 +4,14 @@ import WhatsAppIcon from "./WhatsAppIcon";
 const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
-// Função de rastreio blindada para o Google Ads
-const trackConversion = (type: 'Barreirinha' | 'Tamandare') => {
-  if (typeof window !== 'undefined') {
-    const win = window as any;
-    if (type === 'Barreirinha' && typeof win.converterBarreirinha === 'function') {
-      win.converterBarreirinha();
-    } else if (type === 'Tamandare' && typeof win.converterTamandare === 'function') {
-      win.converterTamandare();
-    }
-  }
-};
-
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
   <div className={flex flex-col sm:flex-row gap-4 ${className}}>
     <a 
       href={WA_TAMANDARE} 
       target="_blank" 
       rel="noopener noreferrer" 
-      id="btn-tamandare" 
       className="btn-whatsapp"
-      onClick={() => trackConversion('Tamandare')}
+      onClick={() => { if (typeof window !== 'undefined' && (window as any).converterTamandare) (window as any).converterTamandare(); }}
     >
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
@@ -34,7 +21,7 @@ export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
       target="_blank" 
       rel="noopener noreferrer" 
       className="btn-whatsapp"
-      onClick={() => trackConversion('Barreirinha')}
+      onClick={() => { if (typeof window !== 'undefined' && (window as any).converterBarreirinha) (window as any).converterBarreirinha(); }}
     >
       <WhatsAppIcon />
       Falar com unidade Barreirinha
@@ -62,7 +49,7 @@ export const FloatingWhatsApp = () => {
             href={WA_TAMANDARE}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackConversion('Tamandare')}
+            onClick={() => { if (typeof window !== 'undefined' && (window as any).converterTamandare) (window as any).converterTamandare(); }}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
@@ -73,7 +60,7 @@ export const FloatingWhatsApp = () => {
             href={WA_BARREIRINHA}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackConversion('Barreirinha')}
+            onClick={() => { if (typeof window !== 'undefined' && (window as any).converterBarreirinha) (window as any).converterBarreirinha(); }}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
