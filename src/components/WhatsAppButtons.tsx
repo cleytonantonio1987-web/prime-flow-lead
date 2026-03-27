@@ -4,13 +4,37 @@ import WhatsAppIcon from "./WhatsAppIcon";
 const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
+// Função auxiliar para disparar a conversão sem erro de TypeScript
+const trackConversion = (type: 'Barreirinha' | 'Tamandare') => {
+  if (typeof window !== 'undefined') {
+    if (type === 'Barreirinha' && (window as any).converterBarreirinha) {
+      (window as any).converterBarreirinha();
+    } else if (type === 'Tamandare' && (window as any).converterTamandare) {
+      (window as any).converterTamandare();
+    }
+  }
+};
+
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
-  <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
-  <a href={WA_TAMANDARE} target="_blank" rel="noopener noreferrer" id="btn-tamandare" className="btn-whatsapp">
+  <div className={flex flex-col sm:flex-row gap-4 ${className}}>
+    <a 
+      href={WA_TAMANDARE} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      id="btn-tamandare" 
+      className="btn-whatsapp"
+      onClick={() => trackConversion('Tamandare')}
+    >
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
     </a>
-    <a href={WA_BARREIRINHA} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+    <a 
+      href={WA_BARREIRINHA} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="btn-whatsapp"
+      onClick={() => trackConversion('Barreirinha')}
+    >
       <WhatsAppIcon />
       Falar com unidade Barreirinha
     </a>
@@ -37,6 +61,7 @@ export const FloatingWhatsApp = () => {
             href={WA_TAMANDARE}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackConversion('Tamandare')}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
@@ -47,6 +72,7 @@ export const FloatingWhatsApp = () => {
             href={WA_BARREIRINHA}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackConversion('Barreirinha')}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
