@@ -4,13 +4,14 @@ import WhatsAppIcon from "./WhatsAppIcon";
 const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
-// Função auxiliar para disparar a conversão sem erro de TypeScript
+// Função de rastreio blindada para o Google Ads
 const trackConversion = (type: 'Barreirinha' | 'Tamandare') => {
   if (typeof window !== 'undefined') {
-    if (type === 'Barreirinha' && (window as any).converterBarreirinha) {
-      (window as any).converterBarreirinha();
-    } else if (type === 'Tamandare' && (window as any).converterTamandare) {
-      (window as any).converterTamandare();
+    const win = window as any;
+    if (type === 'Barreirinha' && typeof win.converterBarreirinha === 'function') {
+      win.converterBarreirinha();
+    } else if (type === 'Tamandare' && typeof win.converterTamandare === 'function') {
+      win.converterTamandare();
     }
   }
 };
