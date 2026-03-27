@@ -4,26 +4,57 @@ import WhatsAppIcon from "./WhatsAppIcon";
 const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
+// 🔥 FUNÇÃO ÚNICA DE TRACKING
+const abrirWhatsApp = (tipo: "tamandare" | "barreirinha") => {
+  const config = {
+    tamandare: {
+      url: WA_TAMANDARE,
+      conversion: "AW-18029857273/Q0TLCMelhY8cEPmTp5VD"
+    },
+    barreirinha: {
+      url: WA_BARREIRINHA,
+      conversion: "AW-18029857273/p9ZmCMSlhY8cEPmTp5VD"
+    }
+  };
+
+  const data = config[tipo];
+
+  if (window.gtag) {
+    window.gtag("event", "conversion", {
+      send_to: data.conversion,
+      event_callback: function () {
+        window.open(data.url, "_blank");
+      }
+    });
+
+    // 🔥 fallback caso o callback falhe
+    setTimeout(() => {
+      window.open(data.url, "_blank");
+    }, 500);
+  } else {
+    window.open(data.url, "_blank");
+  }
+};
+
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
-  <div className={flex flex-col sm:flex-row gap-4 ${className}}>
-    <a 
-      href={WA_TAMANDARE} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+  <div className={`flex flex-col sm:flex-row gap-4 ${className}`}>
+    
+    <button 
+      onClick={() => abrirWhatsApp("tamandare")}
       className="btn-whatsapp"
     >
       <WhatsAppIcon />
       Falar com unidade Almirante Tamandaré
-    </a>
-    <a 
-      href={WA_BARREIRINHA} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+    </button>
+
+    <button 
+      onClick={() => abrirWhatsApp("barreirinha")}
       className="btn-whatsapp"
     >
       <WhatsAppIcon />
       Falar com unidade Barreirinha
-    </a>
+    </button>
+
   </div>
 );
 
@@ -43,28 +74,28 @@ export const FloatingWhatsApp = () => {
     <div ref={ref} className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {open && (
         <div className="flex flex-col gap-2 animate-in fade-in slide-in-from-bottom-4 duration-200 mb-2">
-          <a
-            href={WA_TAMANDARE}
-            target="_blank"
-            rel="noopener noreferrer"
+          
+          <button
+            onClick={() => abrirWhatsApp("tamandare")}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
             <WhatsAppIcon className="w-5 h-5" />
             Almirante Tamandaré
-          </a>
-          <a
-            href={WA_BARREIRINHA}
-            target="_blank"
-            rel="noopener noreferrer"
+          </button>
+
+          <button
+            onClick={() => abrirWhatsApp("barreirinha")}
             className="flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-bold shadow-xl transition-all hover:scale-105"
             style={{ backgroundColor: "hsl(142 70% 40%)", color: "#fff" }}
           >
             <WhatsAppIcon className="w-5 h-5" />
             Barreirinha
-          </a>
+          </button>
+
         </div>
       )}
+
       <button
         onClick={() => setOpen((v) => !v)}
         className="flex items-center justify-center w-16 h-16 rounded-full shadow-2xl animate-pulse-whatsapp transition-transform hover:scale-110"
