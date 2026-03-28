@@ -4,36 +4,29 @@ import WhatsAppIcon from "./WhatsAppIcon";
 const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
-// 🔥 FUNÇÃO ÚNICA DE TRACKING
+// 🔥 FUNÇÃO DE TRACKING (AGORA VIA GTM)
 const abrirWhatsApp = (tipo: "tamandare" | "barreirinha") => {
   const config = {
     tamandare: {
       url: WA_TAMANDARE,
-      conversion: "AW-18029857273/Q0TLCMelhY8cEPmTp5VD"
+      event: "whatsapp_tamandare"
     },
     barreirinha: {
       url: WA_BARREIRINHA,
-      conversion: "AW-18029857273/p9ZmCMSlhY8cEPmTp5VD"
+      event: "whatsapp_barreirinha"
     }
   };
 
   const data = config[tipo];
 
-  if (window.gtag) {
-    window.gtag("event", "conversion", {
-      send_to: data.conversion,
-      event_callback: function () {
-        window.open(data.url, "_blank");
-      }
-    });
+  // 🔥 ENVIA EVENTO PRO GOOGLE TAG MANAGER
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: data.event
+  });
 
-    // 🔥 fallback caso o callback falhe
-    setTimeout(() => {
-      window.open(data.url, "_blank");
-    }, 500);
-  } else {
-    window.open(data.url, "_blank");
-  }
+  // abre WhatsApp
+  window.open(data.url, "_blank");
 };
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
