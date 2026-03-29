@@ -2,7 +2,19 @@
 <html lang="pt-BR">
   <head>
 
-    <!-- 🔥 GOOGLE TAG MANAGER (TEM QUE SER O PRIMEIRO SCRIPT) -->
+    <!-- 🔥 CONSENT MODE (TEM QUE VIR ANTES DO GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    </script>
+
+    <!-- 🔥 GOOGLE TAG MANAGER -->
     <script>
       (function(w,d,s,l,i){
         w[l]=w[l]||[];
@@ -53,7 +65,7 @@
 
   <body>
 
-    <!-- 🔥 GTM (OBRIGATÓRIO LOGO APÓS ABRIR BODY) -->
+    <!-- 🔥 GTM (NOSCRIPT) -->
     <noscript>
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-C1NgRAYL"
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
