@@ -1,11 +1,10 @@
-// update agora vai
 import { useState, useRef, useEffect } from "react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 const WA_TAMANDARE = "https://wa.me/5541995476963?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 const WA_BARREIRINHA = "https://wa.me/5541995119523?text=Olá%20vim%20pelo%20site%20da%20Prime%20Pisos%20e%20gostaria%20de%20realizar%20um%20orçamento";
 
-// 🔥 FUNÇÃO DE TRACKING (AGORA VIA GTM)
+// 🔥 FUNÇÃO DE TRACKING (CORRIGIDA)
 const abrirWhatsApp = (tipo: "tamandare" | "barreirinha") => {
   const config = {
     tamandare: {
@@ -20,16 +19,17 @@ const abrirWhatsApp = (tipo: "tamandare" | "barreirinha") => {
 
   const data = config[tipo];
 
-  // 🔥 ENVIA EVENTO PRO GTM (SEM RECRIAR DATALAYER)
+  // 🔥 ENVIA EVENTO PRO GTM
   window.dataLayer?.push({
     event: data.event
   });
 
-  // 🔥 DEBUG PRA GARANTIR
-  console.log("DISPAROU EVENTO:", data.event);
+  console.log("EVENTO ENVIADO:", data.event);
 
-  // abre WhatsApp
-  window.open(data.url, "_blank");
+  // 🔥 ESPERA PRA GARANTIR QUE O EVENTO DISPAROU
+  setTimeout(() => {
+    window.open(data.url, "_blank");
+  }, 300);
 };
 
 export const WhatsAppButtons = ({ className = "" }: { className?: string }) => (
