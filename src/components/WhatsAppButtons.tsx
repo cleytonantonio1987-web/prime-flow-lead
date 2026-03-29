@@ -20,11 +20,13 @@ const abrirWhatsApp = (tipo: "tamandare" | "barreirinha") => {
 
   const data = config[tipo];
 
-  // 🔥 ENVIA EVENTO PRO GOOGLE TAG MANAGER
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
+  // 🔥 ENVIA EVENTO PRO GTM (SEM RECRIAR DATALAYER)
+  window.dataLayer?.push({
     event: data.event
   });
+
+  // 🔥 DEBUG PRA GARANTIR
+  console.log("DISPAROU EVENTO:", data.event);
 
   // abre WhatsApp
   window.open(data.url, "_blank");
