@@ -1,3 +1,4 @@
+// update
 import heroBg from "@/assets/hero-bg.jpg";
 import logoIcon from "@/assets/logo-icon.png";
 import { WhatsAppButtons } from "./WhatsAppButtons";
@@ -22,12 +23,9 @@ const HeroSection = () =>
       <span className="inline-block mb-4 py-2 rounded-full text-primary-foreground font-semibold tracking-wide uppercase backdrop-blur-sm border border-primary-foreground/10 bg-primary px-[16px] text-lg">
         Prime Pisos e Revestimentos
       </span>
-      <h1 className="text-3xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:text-2xl">Pisos laminados e vinílicos em Curitiba e região 
-
-    </h1>
-      
-
-    
+      <h1 className="text-3xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:text-2xl">
+        Pisos laminados e vinílicos em Curitiba e região
+      </h1>
 
       {/* Price cards */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
@@ -57,9 +55,7 @@ const HeroSection = () =>
         Fale agora com a unidade mais próxima:
       </p>
       <WhatsAppButtons className="justify-center" />
-      
-
-    
     </div>
-  </section>;
+</section>;
+
 export default HeroSection;
