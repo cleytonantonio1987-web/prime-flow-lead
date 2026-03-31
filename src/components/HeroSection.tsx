@@ -31,15 +31,21 @@ const HeroSection = () =>
 
       {/* Price cards */}
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
-        <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
-          <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Laminado</p>
-          <p className="text-3xl font-bold text-primary-foreground">R$ 69,97<span className="text-lg">/m²</span></p>
-          <p className="text-primary-foreground/70 text-xs mt-1">instalado</p>
+        <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-left w-full sm:w-auto">
+          <p className="text-primary-foreground text-sm font-semibold uppercase tracking-wide mb-3 text-center">Piso Laminado</p>
+          <ul className="space-y-1.5">
+            <li className="text-primary-foreground/90 text-sm font-medium">✔ Instalação Ultra Rápida</li>
+            <li className="text-primary-foreground/90 text-sm font-medium">✔ Conforto Térmico Premium</li>
+            <li className="text-primary-foreground/90 text-sm font-medium">✔ Ideal para Quartos e Salas</li>
+          </ul>
         </div>
-        <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-center w-full sm:w-auto">
-          <p className="text-primary-foreground/80 text-sm font-semibold uppercase tracking-wide mb-1">Piso Vinílico</p>
-          <p className="text-3xl font-bold text-primary-foreground">R$ 79,97<span className="text-lg">/m²</span></p>
-          <p className="text-primary-foreground/70 text-xs mt-1">instalado</p>
+        <div className="bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 rounded-2xl px-8 py-5 text-left w-full sm:w-auto">
+          <p className="text-primary-foreground text-sm font-semibold uppercase tracking-wide mb-3 text-center">Piso Vinílico</p>
+          <ul className="space-y-1.5">
+            <li className="text-primary-foreground/90 text-sm font-medium">✔ Alta Resistência à Água</li>
+            <li className="text-primary-foreground/90 text-sm font-medium">✔ Silencioso e Acústico</li>
+            <li className="text-primary-foreground/90 text-sm font-medium">✔ Resistente a Pets e Riscos</li>
+          </ul>
         </div>
       </div>
       <div className="text-primary-foreground/50 text-xs mb-6 space-y-0.5">
